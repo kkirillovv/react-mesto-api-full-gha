@@ -1,0 +1,19 @@
+.edit-form__input-error {
+  display: block;
+  min-height: 30px;
+  color: #f00;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  width: calc(100% - 72px);
+  margin: 5px 36px -30px;
+  opacity: 0;
+}
+
+@media (max-width: 530px) {
+  .edit-form__input-error {
+    width: calc(100% - 44px);
+    margin: 5px 22px -30px;
+  }
+}

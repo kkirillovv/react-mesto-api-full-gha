@@ -1,0 +1,13 @@
+.element__like-counter {
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding-left: 7px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 13px;
+}
+

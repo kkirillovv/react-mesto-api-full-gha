@@ -1,0 +1,21 @@
+.edit-form__button_type_white {
+  width: 358px;
+  height: 50px;
+  margin: 216px auto 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+  background: #fff;
+}
+
+@media (max-width: 530px) {
+  .edit-form__button_type_white {
+    width: 260px;
+    height: 46px;
+    margin: 173px auto 25px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

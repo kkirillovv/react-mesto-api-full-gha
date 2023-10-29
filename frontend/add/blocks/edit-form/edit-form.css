@@ -1,0 +1,11 @@
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+}
+
+@media (max-width: 530px) {
+  .edit-form {
+    width: 282px;
+  }
+}

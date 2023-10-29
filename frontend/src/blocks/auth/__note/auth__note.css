@@ -1,0 +1,15 @@
+.auth__note {
+  width: 430px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 530px) {
+  .auth__note {
+    width: 282px;
+  }
+}

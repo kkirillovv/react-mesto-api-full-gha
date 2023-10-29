@@ -1,0 +1,15 @@
+.header__navigator-link {
+  text-align: right;
+  text-decoration-line: none;
+  color: #fff;
+  padding-left: 24px;
+}
+
+@media (max-width: 530px) {
+  .header__navigator-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 30px 0 0;
+  }
+}

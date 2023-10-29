@@ -1,0 +1,16 @@
+.edit-form__button_inactive {
+  border: 1px solid #000;
+  border-radius: 2px;
+  background: #E5E5E5;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #000;
+  pointer-events: none;
+}
+
+.edit-form__button_inactive:disabled {
+    opacity: 0.2;
+}

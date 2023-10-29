@@ -1,0 +1,24 @@
+.edit-form__input-text {
+  border: 0;
+  border-bottom: 1px solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 0 13px;
+  width: calc(100% - 72px);
+  margin: 30px 36px 0;
+}
+
+.edit-form__input-text:focus {
+    outline: none;
+}
+
+@media (max-width: 530px) {
+  .edit-form__input-text {
+    width: calc(100% - 44px);
+    margin: 30px 22px 0;
+  }
+}

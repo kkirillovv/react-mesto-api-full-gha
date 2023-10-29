@@ -1,0 +1,76 @@
+/* затем подгружаем нормализацию стилей */
+@import url(../vendor/normalize.css);
+/* подгружаем фонт Inter */
+@import url(../fonts/fonts.css);
+/* подгружаем общие стили интерфейса */
+@import url(../blocks/body/body.css);
+@import url(../blocks/page/page.css);
+
+/* подгружаем стили блока Хедер */
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__navigator/header__navigator.css);
+@import url(../blocks/header/__navigator-link/header__navigator-link.css);
+
+/* подгружаем стили блока Profile */
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__add-photo/profile__add-photo.css);
+@import url(../blocks/profile/__avatar/profile__avatar.css);
+@import url(../blocks/profile-info/profile-info.css);
+@import url(../blocks/profile-info/__activity/profile-info__activity.css);
+@import url(../blocks/profile-info/__edit/profile-info__edit.css);
+@import url(../blocks/profile-info/__name/profile-info__name.css);
+
+/* подгружаем стили блока Elements */
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__photo/element__photo.css);
+@import url(../blocks/element/__trash/element__trash.css);
+@import url(../blocks/element/__block/element__block.css);
+@import url(../blocks/element/__title/element__title.css);
+@import url(../blocks/element/__like/element__like.css);
+@import url(../blocks/element/__like/_active/element__like_active.css);
+@import url(../blocks/element/__like-counter/element__like-counter.css);
+
+/* подгружаем стили блока Футер */
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+/* подгружаем стили блока Popup */
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/_overlay/popup_overlay_show-card.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__container/_edit-form/popup__container_edit-form.css);
+@import url(../blocks/popup/__container/_card-details/popup__container_card-details.css);
+@import url(../blocks/popup/__close/popup__close.css);
+
+/* подгружаем стили блока Edit-form */
+@import url(../blocks/edit-form/edit-form.css);
+@import url(../blocks/edit-form/__title/edit-form__title.css);
+@import url(../blocks/edit-form/__title/_type/edit-form__title_type_white.css);
+@import url(../blocks/edit-form/__set/edit-form__set.css);
+@import url(../blocks/edit-form/__field/edit-form__field.css);
+@import url(../blocks/edit-form/__input-text/edit-form__input-text.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_activity.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_link.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_name.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_title.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_error.css);
+@import url(../blocks/edit-form/__input-text/_type/edit-form__input-text_type_grey.css);
+@import url(../blocks/edit-form/__input-error/edit-form__input-error.css);
+@import url(../blocks/edit-form/__input-error/_active/edit-form__input-error_active.css);
+@import url(../blocks/edit-form/__button/edit-form__button.css);
+@import url(../blocks/edit-form/__button/_type/edit-form__button_type_save.css);
+@import url(../blocks/edit-form/__button/_type/edit-form__button_type_white.css);
+@import url(../blocks/edit-form/__button/_inactive/edit-form__button_inactive.css);
+
+/* подгружаем стили блока Card-details */
+@import url(../blocks/card-details/card-details.css);
+@import url(../blocks/card-details/__image/card-details__image.css);
+@import url(../blocks/card-details/__title/card-details__title.css);
+
+/* подгружаем стили блока Auth */
+@import url(../blocks/auth/auth.css);
+@import url(../blocks/auth/__container/auth__container.css);
+@import url(../blocks/auth/__note/auth__note.css);

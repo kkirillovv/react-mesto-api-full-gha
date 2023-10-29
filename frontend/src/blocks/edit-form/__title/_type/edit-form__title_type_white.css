@@ -1,0 +1,13 @@
+.edit-form__title_type_white {
+  color: #fff;
+  text-align: center;
+  margin: 60px auto 0;
+}
+
+@media (max-width: 530px) {
+  .edit-form__title_type_white {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 40px auto 0;
+  }
+}
