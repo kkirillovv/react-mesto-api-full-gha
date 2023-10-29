@@ -9,11 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.121.199
+IP 158.160.121.199
 
 Frontend https://kirillovk.nomoredomainsrocks.ru
 
 Backend https://api.kirillovk.nomoredomainsrocks.ru
-
-  
-
