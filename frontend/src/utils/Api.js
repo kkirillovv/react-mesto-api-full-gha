@@ -113,8 +113,8 @@ class Api {
 // C. Объявляем Api --------------------------------------------------------
 
 const api = new Api({
-  baseUrl: 'http://localhost:3000',
-// baseUrl: 'https://api.kirillovk.nomoredomainsrocks.ru',
+// baseUrl: 'http://localhost:3000',
+baseUrl: 'https://api.kirillovk.nomoredomainsrocks.ru',
 })
 
 export default api
