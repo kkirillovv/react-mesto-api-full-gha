@@ -61,20 +61,20 @@ function App() {
           text: err
         })
       })
-    }
-
-    api.getPageData()
-    .then(([user, initialCards]) => {
-      getUserInfo(user)
-      initialCards.forEach((item) => {
-        item.userId = user._id
-        item.counterLikes = item.likes.length 
+      
+      api.getPageData()
+      .then(([user, initialCards]) => {
+        getUserInfo(user.data)
+        initialCards.forEach((item) => {
+          item.userId = user._id
+          item.counterLikes = item.likes.length 
+        })
+        getCardsData(initialCards) 
       })
-      getCardsData(initialCards)
-    })
-    .catch((err) => {
-      console.error(`Что-то пошло не так: ${err}`)
-    })
+      .catch((err) => {
+        console.error(`Что-то пошло не так: ${err}`)
+      })
+    }
   }, [])
 
 
@@ -107,7 +107,7 @@ function App() {
 
   function handleCardLike (card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
-    const isLiked = card.likes.some(i => i._id === currentUser._id)
+    const isLiked = card.likes.some(i => i === currentUser._id)
     
     // Отправляем запрос в API и получаем обновлённые данные карточки
     api.changeLike(card._id, !isLiked)

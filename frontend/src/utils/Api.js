@@ -1,8 +1,6 @@
 class Api {
   constructor(options) { // инициировали this, сконструировали и вернули его
     this._url = options.baseUrl
-    this._headers = options.headers
-    this._authorization = options.headers.authorization
   }
 
   _getStatusData(res) {
@@ -14,18 +12,25 @@ class Api {
   }
 
   async getInitialCards() { // получаем карточки с БД сервера
+    const token = localStorage.getItem('jwt')
+    console.log('cards - 1')
     const res = await fetch(`${this._url}/cards`, {
       headers: {
-        authorization: this._authorization
+        authorization: `Bearer ${token}`
       }
     })
+    console.log('cards - 2')
     return this._getStatusData(res)
   }
 
   async addNewCard(card) { // добавляем карточку в БД сервера
+    const token = localStorage.getItem('jwt')
     const res = await fetch(`${this._url}/cards`, {
       method: 'POST',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${token}`, 
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name: card.name,
         link: card.link,
@@ -35,39 +40,48 @@ class Api {
   }
 
   async deleteCard (cardId) { // удаляем карточку из БД сервера
+    const token = localStorage.getItem('jwt')
     const res = await fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
       headers: {
-        authorization: this._authorization
+        authorization: `Bearer ${token}`
       }
     })
     return this._getStatusData(res)
   }
 
   async changeLike (cardId, status) { // изменяем лайк в карточке в БД сервера
+    const token = localStorage.getItem('jwt')
     const method = (status) ? 'PUT' : 'DELETE'
     const res = await fetch(`${this._url}/cards/${cardId}/likes`, {
       method: `${method}`,
       headers: {
-        authorization: this._authorization
+        authorization: `Bearer ${token}`
       }
     })
     return this._getStatusData(res)
   }
 
   async getUserInfo () { // загрузка информации о пользователе из БД сервера
+    const token = localStorage.getItem('jwt')
+    console.log('user - 1')
     const res = await fetch(`${this._url}/users/me`, {
       headers: {
-        authorization: this._authorization
+        authorization: `Bearer ${token}`
       }
     })
+    console.log('user - 2')
     return this._getStatusData(res)
   }
 
   async editUserInfo (user) { // редактирование профиля пользователя в БД сервера
+    const token = localStorage.getItem('jwt')
     const res = await fetch(`${this._url}/users/me`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${token}`, 
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name: user.name,
         about: user.about,
@@ -77,9 +91,13 @@ class Api {
   }
 
   async editUserAvatar (user) { // редактирование аватарки пользователя в БД сервера
+    const token = localStorage.getItem('jwt')
     const res = await fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${token}`, 
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         avatar: user.avatar,
       })
@@ -95,11 +113,8 @@ class Api {
 // C. Объявляем Api --------------------------------------------------------
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-71',
-  headers: {
-    authorization: 'a149f600-eebc-47f5-a0ad-e57bcbf61195', 
-    'Content-Type': 'application/json'
-  }
+  baseUrl: 'http://localhost:3000',
+// baseUrl: 'https://api.kirillovk.nomoredomainsrocks.ru',
 })
 
 export default api

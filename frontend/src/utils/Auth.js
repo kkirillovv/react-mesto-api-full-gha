@@ -1,6 +1,8 @@
 import { checkResponse } from './CheckResponse.js'
 
-export const BASE_URL = 'api.kirillovk.nomoredomainsrocks.ru'
+export const BASE_URL = 'http://localhost:3000'
+// export const BASE_URL = 'https://api.kirillovk.nomoredomainsrocks.ru'
+
 
 export const register = async (password, email) => {
   const response = await fetch(`${BASE_URL}/signup`, {
