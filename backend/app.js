@@ -43,6 +43,13 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use(requestLogger) // подключаем логгер запросов
 
+// Краш-тест сервера
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт')
+  }, 0)
+})
+
 // за ним идут все обработчики роутов
 app.use('/signin', loginUser)
 app.use('/signup', createUser)
