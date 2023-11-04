@@ -41,15 +41,16 @@ function App() {
   // стейт навигации
   const [link, handleLink] = useState(true)
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
-    if (localStorage.getItem('jwt')) {
-      const jwt = localStorage.getItem('jwt');
+    const jwt = localStorage.getItem('jwt')
+    if (jwt) {
       auth.checkToken(jwt).then((res) => {
         if (res) {
           setLoggedIn(true);
           setEmail(res.data.email)
+          // history.push("/")
           navigate("/main", {replace: true})
         } else {
           return Promise.reject("Токен устарел!")
@@ -61,7 +62,7 @@ function App() {
           text: err
         })
       })
-      
+
       api.getPageData()
       .then(([user, initialCards]) => {
         getUserInfo(user.data)
@@ -75,7 +76,7 @@ function App() {
         console.error(`Что-то пошло не так: ${err}`)
       })
     }
-  }, [])
+  }, [loggedIn])
 
 
 

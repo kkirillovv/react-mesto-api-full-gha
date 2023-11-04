@@ -13,13 +13,11 @@ class Api {
 
   async getInitialCards() { // получаем карточки с БД сервера
     const token = localStorage.getItem('jwt')
-    console.log('cards - 1')
     const res = await fetch(`${this._url}/cards`, {
       headers: {
         authorization: `Bearer ${token}`
       }
     })
-    console.log('cards - 2')
     return this._getStatusData(res)
   }
 
@@ -64,13 +62,11 @@ class Api {
 
   async getUserInfo () { // загрузка информации о пользователе из БД сервера
     const token = localStorage.getItem('jwt')
-    console.log('user - 1')
     const res = await fetch(`${this._url}/users/me`, {
       headers: {
         authorization: `Bearer ${token}`
       }
     })
-    console.log('user - 2')
     return this._getStatusData(res)
   }
 
